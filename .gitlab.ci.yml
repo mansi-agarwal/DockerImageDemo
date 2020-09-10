@@ -13,7 +13,7 @@ node_build:
     - master
   script: 
     - "echo Stage - Build started"
-    - "cd ./WebApplication"
+    - "cd ./DockerImageDemo"
     - dir
     - dotnet build
 
@@ -23,6 +23,6 @@ node_test:
     - master
   script: 
     - "echo Stage - Test started"
-    - "cd ./WebApplication"
+    - "cd ./DockerImageDemo"
     - dir
     - dotnet build
