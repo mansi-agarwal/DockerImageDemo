@@ -1,0 +1,28 @@
+image: microsoft/dotnet:latest
+
+stages:
+  - build
+  - test
+  
+before_script:
+  - "dotnet restore"
+  
+node_build: 
+  stage: build
+  only: 
+    - master
+  script: 
+    - "echo Stage - Build started"
+    - "cd ./WebApplication"
+    - dir
+    - dotnet build
+
+node_test: 
+  stage: test
+  only: 
+    - master
+  script: 
+    - "echo Stage - Test started"
+    - "cd ./WebApplication"
+    - dir
+    - dotnet build
